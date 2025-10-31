@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- add required and recommended <meta> tags -->
+  <!-- add required and recommended <meta> tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Professor Licia Bailey, Arizona State University">
@@ -20,9 +20,11 @@
   <meta name="twitter:description" content="">
   <meta name="twitter:image" content="">"
 </head>
+
 <body>
-<!-- add a skip link that skips to the main content -->
-<!-- add correct heading levels -->
+  <!-- add a skip link that skips to the main content -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <!-- add correct heading levels -->
   <header>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round" width="75" height="75" stroke-width="1.5">
       <path d="M2 12h1"></path>
@@ -36,12 +38,14 @@
     <h1>Transform Your Life at Limitless Fitness</h1>
     <p>Unleash your strength, embrace the challenge, and join a community dedicated to your fitness journey.</p>
     <a href="#">Join Now</a>
-<!-- add alt text where necessary -->
-<!-- add responsive images for resolution switching -->
-    
+    <!-- add alt text where necessary -->
+    <!-- add responsive images for resolution switching -->
+    <img srcset="images/facility-320w.jpg 320w,images/facility-768w.jpg 768w"
+      sizes="100vw"
       src="images/facility.jpg"
-
+      alt="grayscale image of fitness facility with elliptical machine, treadmills and weight bench and rack">
   </header>
+
   <nav>
     <h2>Main Navigation</h2>
     <ul>
@@ -53,7 +57,8 @@
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>
-  <main>
+
+  <main id="main">
     <section>
       <h2>About Us</h2>
       <p>Welcome to Limitless Fitness, where fitness meets community. Our state-of-the-art facility is designed to inspire and support you at every stage of your journey. Whether you're a beginner or a seasoned athlete, our expert trainers and diverse classes provide the perfect environment to achieve your personal best.</p>
@@ -67,6 +72,7 @@
         </ul>
       </section>
     </section>
+
     <section>
       <h2>Our Classes</h2>
       <p>Discover a wide variety of classes designed to challenge and energize you.</p>
@@ -77,11 +83,14 @@
         <li>Specialty Workshops: From functional training to mindfulness sessions.</li>
         <li>Check out our [Class Schedule] for times and detailed descriptions.</li>
       </ul>
-<!-- add alt text where necessary -->
-<!-- add responsive images for resolution switching -->
+      <!-- add alt text where necessary -->
+      <!-- add responsive images for resolution switching -->
+      <img srcset="images/classes-320w.jpg 320w, images/classes-768w.jpg 768w"
+        sizes="100vw"
         src="images/classes.jpg"
-
+        alt="grayscale image of two women and one man squatting with barbells">
     </section>
+
     <section>
       <h2>Personal Training</h2>
       <p>
@@ -89,11 +98,14 @@
         Ready for a change?
       </p> 
       <a href="#">Book a Free Consultation today!</a>
-<!-- add alt text where necessary -->
-<!-- add responsive images for resolution switching -->
+      <!-- add alt text where necessary -->
+      <!-- add responsive images for resolution switching -->
+      <img srcset="images/dumbells-320w.jpg 320w, images/dumbells-768w.jpg 768w"
+        sizes="100vw"
         src="images/dumbells.jpg"
-
+        alt="grayscale image of a rack of dumbbells">
     </section>
+
     <section>
       <h2>Membership Options</h2>
       <p>At Limitless Fitness, we offer flexible membership plans to suit your needs.</p>
@@ -105,20 +117,34 @@
       <section id="membership-form">
         <h3>Join Limitless Fitness Today!</h3>
         <p>Fill out the form below to kickstart your fitness journey:</p>
-<!--add accessibility to the form-->
-        Full Name
-        Email Address
-        Phone Number
-        Membership Type
-          Select a Membership Option
-          Monthly Membership
-          Annual Membership
-          Family & Group Plans
-        Tell us about your fitness goals:
-        Submit
+        <!--add accessibility to the form-->
+        <form method="post" action="https://wp.zybooks.com/form-viewer.php">
+            <label for="fullName">Full Name<span class="required">*</span></label>
+            <input type="text" id="fullName" name="fullName" autocomplete="name" required>
+
+            <label for="email">Email Address<span class="required">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+
+            <label for="phone">Phone Number<span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+
+            <label for="membership">Membership Type</label>
+            <select id="membership" name="membership">
+              <option value="Select">Select a Membership Option</option>
+              <option value="Monthly">Monthly Membership</option>
+              <option value="Annual">Annual Membership</option>
+              <option value="Family-Group">Family & Group Plans</option> 
+            </select>
+
+            <label for="comments">Tell us about your fitness goals:</label>
+            <textarea id="comments" name="comments"></textarea>
+
+            <input type="submit" name="submitForm" value="Submit">   
+        </form>   
       </section>
     </section>
   </main>
+
   <aside>
     <h2>Testimonials</h2>
     <q>
@@ -128,6 +154,7 @@
       The variety of classes and top-notch equipment keeps me motivated every single day.- Jamie L.
     </q>
   </aside>
+
   <footer>
     <section>
       <h2>Stay connected</h2>
